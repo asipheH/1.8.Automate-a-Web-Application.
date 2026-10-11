@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration</title>
+</head>
+<body>
+    <h1>Employee Registration</h1>
+    <p>Create your employee account below</p>
+
+    <p id="error-message" th:if="${error}" th:text="${error}" style="color: red;"></p>
+
+    <form th:action="@{/register}" th:object="${employee}" method="post">
+
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" th:field="*{fullName}" required>
+
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" th:field="*{email}" required>
+
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" th:field="*{password}" required>
+
+        <br><br>
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+        <br><br>
+
+        <button type="submit" id="registerButton">register</button>
+    </form>
+
+    <p>Already registered? <a href="/login" id="loginLink">Login Here</a></p>
+</body>
+</html>

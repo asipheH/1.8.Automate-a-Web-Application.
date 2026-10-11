@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Home</title>
+</head>
+<body>
+    <h1 id="welcomeMessage">Employee App Home</h1>
+    <p>Welcome, <span th:text="${fullName}">Employee</span>!</p>
+    <p>You have logged in successfully</p>
+
+    <p>Registered Email: <span th:text="${email}">ahashe@test.com</span></p>
+
+    <a href="/login" id="backToLogin">Back to Login</a>
+</body>
+</html>
